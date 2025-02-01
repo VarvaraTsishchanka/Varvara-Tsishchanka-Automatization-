@@ -4,8 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
-
-public class LoginTest {
+public class LoginTestFail {
     private WebDriver driver;
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
@@ -13,7 +12,7 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.get("https://qa-course-01.andersenlab.com/login");
         WebElement emailField = driver.findElement(By.name("email"));
-        emailField.sendKeys("maria_7657@mail.ru");
+        emailField.sendKeys("maria_7657mail.ru");
         WebElement passwordField = driver.findElement(By.name("password"));
         passwordField.sendKeys("a12345678");
         WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
