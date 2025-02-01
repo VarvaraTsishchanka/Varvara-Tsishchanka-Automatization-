@@ -19,7 +19,4 @@ public class LoginTest {
         WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
         signInButton.click();
     }
-    public void tearDown() {
-        driver.quit();
-    }
 }
