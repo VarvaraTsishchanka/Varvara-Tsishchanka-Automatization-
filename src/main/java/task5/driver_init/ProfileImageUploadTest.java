@@ -17,8 +17,7 @@ public class ProfileImageUploadTest {
         WebElement signInButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
         signInButton.click();
         // не понимаю, как найти элемент Upload через xpath или css
-        WebElement uploadInput = driver.findElement(By.xpath("//input[@type='file']"));
-        uploadInput.click();
+        WebElement uploadInput = driver.findElement(By.xpath("//img[contains(@src,'upload_photo')]"));
         uploadInput.sendKeys("e:\\Screenshot_1.png");
         WebElement closeButton = driver.findElement(By.name("Close"));
         closeButton.click();
