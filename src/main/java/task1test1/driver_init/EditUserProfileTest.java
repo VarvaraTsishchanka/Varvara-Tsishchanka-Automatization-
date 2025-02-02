@@ -19,5 +19,11 @@ public class EditUserProfileTest {
         passwordField.sendKeys("a12345678");
         WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
         signInButton.click();
+        // не понимаю, как обращатья к Edit, если это не поле, не кнопка, а кликабельная картинка. Каким элеметом ее называть? На этом месте тест перестает работать//
+        WebElement edit = driver.findElement(By.cssSelector("shrink-0 mt-16 w-8 aspect-square max-md:mt-10 cursor-pointer"));
+        edit.click();
+
     }
-}
+
+    }
+
