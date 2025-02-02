@@ -21,7 +21,7 @@ public class RegistrationTest {
         dobField.sendKeys("01/01/1990");
         dobField.sendKeys(Keys.RETURN);
         WebElement emailField = driver.findElement(By.name("email"));
-        emailField.sendKeys("maria_7657@mail.ru");
+        emailField.sendKeys("maria_76257@mail.ru");
         WebElement passwordField = driver.findElement(By.name("password"));
         passwordField.sendKeys("a12345678");
         WebElement passwordConfirmationField = driver.findElement(By.name("passwordConfirmation"));
