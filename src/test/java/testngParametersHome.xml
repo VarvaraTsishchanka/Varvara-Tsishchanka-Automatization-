@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+    <test name="Test">
+        <parameter name="email" value="test111@mail.ru" />
+        <parameter name="password" value="a12345678" />
+        <classes>
+            <class name="LoginTestsVersion2" />
+        </classes>
+    </test>
+    <test name="Test2">
+        <parameter name="email" value="test222@mail.ru" />
+        <parameter name="password" value="a12345678" />
+        <classes>
+            <class name="LoginTestsVersion2" />
+        </classes>
+    </test>
+    <test name="Test3">
+        <parameter name="email" value="test333@mail.ru" />
+        <parameter name="password" value="a12345678" />
+        <classes>
+            <class name="LoginTestsVersion2" />
+        </classes>
+    </test>
+</suite>

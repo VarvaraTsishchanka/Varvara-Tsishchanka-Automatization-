@@ -2,25 +2,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
-public class LoginTests {
 
-    @DataProvider(name = "loginData")
-    public Object[][] loginData() {
-        return new Object[][]{
-                {"test111@mail.ru", "a12345678"},
-                {"test222@mail.ru", "a12345678"},
-                {"test333@mail.ru", "a12345678"}
-        };
-    }
+public class LoginTestsVersion2 {
 
-    @Test(dataProvider = "loginData")
+    @Parameters({"email", "password"})
+    @Test
     public void testLogin(String email, String password) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -47,3 +40,4 @@ public class LoginTests {
         }
     }
 }
+
