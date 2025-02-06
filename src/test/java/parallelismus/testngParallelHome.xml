@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Parallel Test Suite" parallel="tests" thread-count="2">
+    <test name="Test Class 1">
+        <classes>
+            <class name="parallelismus.ParallelClass1" />
+        </classes>
+    </test>
+
+    <test name="Test Class 2">
+        <classes>
+            <class name="parallelismus.ParallelClass2" />
+        </classes>
+    </test>
+</suite>
+
