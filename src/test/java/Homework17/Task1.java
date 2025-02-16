@@ -48,20 +48,18 @@ public class Task1 {
         passwordField.sendKeys(password);
         loginButton.click();
 
-        wait.until(ExpectedConditions.invisibilityOf(loginButton)); // Ожидаем, пока кнопка исчезнет (или появится что-то другое)
+        wait.until(ExpectedConditions.invisibilityOf(loginButton));
         actions.moveToElement(driver.findElement(By.xpath("//div[text()='AQA Practice']")));
-        actions.moveToElement(driver.findElement(By.xpath("//div[contains(text(), 'Select')]")))
-
-        .click();
-
-        // Лучше использовать явное ожидание, а не Thread.sleep
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='your-expected-element']")));  // Замените на XPath ожидаемого элемента
+        actions.moveToElement(driver.findElement(By.xpath("//div[text()='justify-center px-8 py-4 w-full bg-white hover:bg-custom-gray']")))
+                .click();
+        // не получается найти элемент Select //
     }
 
     @AfterMethod
     public void teardown() {
         if (driver != null) {
-            driver.quit(); // Закрываем драйвер после теста
+            driver.quit();
         }
     }
 }
+
