@@ -1,17 +1,16 @@
-package steps;
+package Homework20.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
-
-    WebDriver driver;
+    private WebDriver driver;
 
     @Given("the user navigates to the login page")
     public void the_user_navigates_to_the_login_page() {
@@ -20,6 +19,7 @@ public class LoginSteps {
         driver.manage().window().maximize();
         driver.get("https://qa-course-01.andersenlab.com/login");
         throw new io.cucumber.java.PendingException();
+
     }
 
     @When("the user enters the email {string}")
@@ -27,6 +27,7 @@ public class LoginSteps {
         WebElement emailField = driver.findElement(By.name("email"));
         emailField.sendKeys(email);
         throw new io.cucumber.java.PendingException();
+
     }
 
     @When("the user enters the password {string}")
@@ -34,6 +35,7 @@ public class LoginSteps {
         WebElement passwordField = driver.findElement(By.name("password"));
         passwordField.sendKeys(password);
         throw new io.cucumber.java.PendingException();
+
     }
 
     @When("the user clicks the sign-in button")
@@ -41,11 +43,13 @@ public class LoginSteps {
         WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
         signInButton.click();
         throw new io.cucumber.java.PendingException();
+
     }
 
     @Then("the user should be successfully logged in")
-    public void the_user_should_be_successfully_logged_in() {
-        throw new io.cucumber.java.PendingException();
+    public void the_user_should_be_successfully_logged_in()
+    {
+        driver.quit();
     }
 }
 
